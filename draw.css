@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Akatab:wght@600&family=Belanosima&family=Caveat:wght@500;700&family=Dosis:wght@600&family=Gloria+Hallelujah&family=Handjet:wght@300;400;500&family=Kalam:wght@700&family=Lexend&family=Lilita+One&family=Mooli&family=Signika+Negative:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Caveat', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #2c2c2c;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    gap: 10px;
+    padding: 10px;
+    max-width: 1050px;
+    overflow: hidden;
+}
+
+section {
+    background: #3a3a3a;
+    border-radius: 5px;
+    padding: 12px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.colors-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.tools-board {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+.side-by-side .options {
+    flex: 1;
+}
+
+.tools-board .row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.colors .row {
+    justify-content: center;
+}
+
+.row .title {
+    color: #e1e1e1;
+    margin-right: 10px;
+}
+
+.row .options {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+}
+
+.option, .actions button {
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+
+.option img {
+    filter: grayscale(100%);
+    height: 24px;
+}
+
+.option:is(:hover, .active) img {
+    filter: none;
+}
+
+.colors .option {
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    border: 1px solid #4a4a4a;
+}
+
+.actions button {
+    padding: 6px 12px;
+    border: none;
+    background-color: #3a3a3a;
+    color: #e1e1e1;
+    font-weight: 400;
+}
+
+.drawing-board {
+    flex: 1;
+    background-color: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.drawing-board canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.color-black {
+    background-color: black;
+}
+.color-red {
+    background-color: red;
+}
+.color-blue {
+    background-color: blue;
+}
+
+.color-green {
+    background-color: green;
+}
+.color-yellow {
+    background-color: yellow;
+}
+.color-purple {
+    background-color: purple;
+}
+.color-orange {
+    background-color: orange;
+}
+
+
+.colors .option.selected {
+    border: 2px solid #fff;
+}
